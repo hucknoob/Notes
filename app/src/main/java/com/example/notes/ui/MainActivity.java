@@ -31,16 +31,8 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.fragment_container, mainFragment)//удаляем предыдущий дбавляем новый
                     .commit();
         }
-//
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.fragment_container_frame_layout, mainFragment)
-//                .commit();
+
     }
 
-    /*
-    data class - name date body
-    lanscape orientation - 2 fragments
 
-     */
 }
