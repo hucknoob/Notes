@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="@dimen/text_size_button"
         android:textStyle="bold"
-        app:rippleColor="@color/white" />
+        app:rippleColor="@color/white"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

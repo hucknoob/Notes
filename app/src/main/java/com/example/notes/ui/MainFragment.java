@@ -119,21 +119,24 @@ public class MainFragment extends Fragment implements NoteListAdapter.HandleNote
         bundle.putString("body", note.noteBody);
         bundle.putString("date", note.noteDate);
 
-        CheckFragment checkFragment = new CheckFragment();
-        checkFragment.setArguments(bundle);
+//        CheckFragment checkFragment = new CheckFragment();
+//        checkFragment.setArguments(bundle);
+
+        NoteFragment noteFragment = new NoteFragment();
+        noteFragment.setArguments(bundle);
 
         if (isLandscape()){
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()
                     .addToBackStack("")
-                    .replace(R.id.fragment_container_note, checkFragment)
+                    .replace(R.id.fragment_container_note, noteFragment)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                     .commit();
         } else {
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()
                     .addToBackStack("")
-                    .add(R.id.fragment_container, checkFragment)
+                    .add(R.id.fragment_container, noteFragment)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                     .commit();
         }
